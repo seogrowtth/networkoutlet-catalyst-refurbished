@@ -1,73 +1,108 @@
-# Welcome to your Lovable project
+# Network Infrastructure Website
 
-## Project info
+A professional website for network infrastructure solutions, featuring products, services, and company information.
 
-**URL**: https://lovable.dev/projects/0b1b139d-d137-43bf-b737-d19c611ace3b
+## 🚀 Deploy to GitHub Pages
 
-## How can I edit this code?
+This repository contains a static HTML/CSS/JavaScript website ready for GitHub Pages deployment.
 
-There are several ways of editing your application.
+### Quick Deployment Steps:
 
-**Use Lovable**
+1. **Prepare the files:**
+   - Rename `public/index-static.html` to `index.html`
+   - Keep `styles.css` and `script.js` in the same directory
+   - Move all three files to root OR use the public/docs folder approach below
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/0b1b139d-d137-43bf-b737-d19c611ace3b) and start prompting.
+2. **Option A - Deploy from Root:**
+   ```sh
+   # Move files to root
+   mv public/index-static.html index.html
+   mv public/styles.css styles.css
+   mv public/script.js script.js
+   
+   # Push to GitHub
+   git add .
+   git commit -m "Deploy to GitHub Pages"
+   git push origin main
+   ```
+   
+   Then in GitHub: Settings → Pages → Source: "Deploy from branch" → Branch: `main` / `root`
 
-Changes made via Lovable will be committed automatically to this repo.
+3. **Option B - Deploy from /public folder (Easier):**
+   - Just rename `index-static.html` to `index.html` inside the public folder
+   - Push to GitHub
+   - In GitHub: Settings → Pages → Source: Branch `main` / `/public`
 
-**Use your preferred IDE**
+Your site will be live at: `https://[your-username].github.io/[repository-name]`
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 📁 Project Structure
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+```
+├── public/
+│   ├── index-static.html  # Main HTML file (rename to index.html)
+│   ├── styles.css         # All styling
+│   ├── script.js          # Interactive functionality
+│   └── robots.txt         # SEO configuration
+└── README.md
+```
 
-Follow these steps:
+## ✨ Features
+
+- ✅ Fully responsive design
+- ✅ Mobile-friendly navigation with hamburger menu
+- ✅ Smooth scrolling between sections
+- ✅ Interactive contact form
+- ✅ Professional warm brown/tan theme
+- ✅ SEO optimized with meta tags
+- ✅ Social media integration ready
+
+## 🛠️ Local Development
+
+To view the website locally:
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Option 1: Direct file open
+# Simply open public/index-static.html in your browser
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Option 2: Local server (recommended)
+cd public
+python -m http.server 8000
+# Visit http://localhost:8000
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Option 3: Using Node.js
+npx serve public
+```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+## 🎨 Customization Guide
+
+### Change Colors
+Edit CSS variables in `public/styles.css` (lines 8-19):
+```css
+:root {
+    --color-primary: hsl(25, 60%, 35%);  /* Main brand color */
+    --color-accent: hsl(210, 80%, 45%);  /* Accent color */
+}
+```
+
+### Update Content
+- Edit text directly in `public/index-static.html`
+- Replace placeholder images with your own
+- Update contact information in the footer
+
+### Modify Form Behavior
+Edit `public/script.js` (lines 8-28) to connect to your backend or email service
+
+## 📱 React Version
+
+This repository also includes a React/TypeScript version with the same design:
+
+```sh
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Visit the [Lovable Project](https://lovable.dev/projects/0b1b139d-d137-43bf-b737-d19c611ace3b) for the React version.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 📄 License
 
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/0b1b139d-d137-43bf-b737-d19c611ace3b) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Open source - free for personal and commercial use.
